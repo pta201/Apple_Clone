@@ -1,0 +1,11 @@
+﻿ul li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+input {
+    border: 0.5px solid rgb(128, 128, 128);
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 6px;
+}

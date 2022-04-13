@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="header-section col-8 py-5 lh-1">
+        <div class="header">Store.</div>
+        <div class="subheader">The best way to buy the products you love.</div>
+    </div>
+</div>
+<!--  -->
+<ul id='product-nav-list' class="nav-list m-0 pb-5 d-flex justify-content-between align-items-center">
+    @Html.Action("Categories", "Home")
+</ul>
+<div class="row mb-2">
+    <div class="title-section lh-1">
+        <div class="header">The lastest.</div>
+        <div class="subheader">Take a look at what's new, right now.</div>
+    </div>
+</div>
+
+<div class="swiper mb-5">
+    <div class="swiper-wrapper">
+        @Html.Action("LastestProducts", "Home")
+    </div>
+
+</div>
+
+<div class="swiper mb-5">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="card" style="height: 300px!important; font-weight: bold; font-size: 24px;">
+                <div class="content">
+                    <div class="content-info">
+                        <div class="content-icon"><i class="fa-solid fa-cart-arrow-down" style="color: rgb(63,110,184)"></i></div>
+                        <div class="content-desc"><span class="content-highlight" style="color: rgb(63,110,184)">Convinient pickup options</span> that fit into your everyday schedule.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="card" style="height: 300px !important; font-weight: bold; font-size: 24px;">
+                <div class="content">
+                    <div class="content-info">
+                        <div class="content-icon"><i class="fa-solid fa-truck-fast" style="color: rgb(255,0,83)"></i></div>
+                        <div class="content-desc">Choose fast, free delivery or <span class="content-highlight" style="color: rgb(255,0,83)">two-hour courier delivery.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="card" style="height: 300px !important; font-weight: bold; font-size: 24px;">
+                <div class="content">
+                    <div class="content-info">
+                        <div class="content-icon"><i class="fa-solid fa-face-laugh-beam" style="color: rgb(31,138,255)"></i></div>
+                        <div class="content-desc">Make them yours. <span class="content-highlight" style="color: rgb(31,138,255)">Engrave a mix of emoji, names, and numbers for free.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="card" style="height: 300px !important; font-weight: bold; font-size: 24px;">
+                <div class="content">
+                    <div class="content-info">
+                        <div class="content-icon"><i class="fa-brands fa-apple" style="color: rgb(245,126,95)"></i></div>
+                        <div class="content-desc"><span class="content-highlight" style="color: rgb(245,126,95)">Customize </span>your Mac and create your own style of Apple Watch.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="card" style="height: 300px !important; font-weight: bold; font-size: 24px; ">
+                <div class="content">
+                    <div class="content-info">
+                        <div class="content-icon"><i class="fa-solid fa-money-bill" style="color: rgb(172,57,255)"></i></div>
+                        <div class="content-desc">Trade in your current device. <span class="content-highlight" style="color: rgb(172,57,255)"> Get credit toward a new one.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide"></div>
+    </div>
+</div>

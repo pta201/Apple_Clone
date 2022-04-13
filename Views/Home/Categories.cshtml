@@ -1,0 +1,16 @@
+﻿
+@using Apple_Clone_Website.Models
+@model List<Category>
+
+@foreach (var i in Model)
+{
+    var imgName = i.Image + ".png";
+    <li class="nav-list-item">
+        <div class="product-nav-card">
+            <img class="product-nav-card-image" src="~/Content/Images/Categories/@imgName" alt="category">
+            <div class="product-nav-card-info">
+                <div class="product-nav-card-name">@Html.ActionLink(i.Name, "ProductList", "Shop", new { categories = i.CategoryID }, null)</div>
+            </div>
+        </div>
+    </li>
+}

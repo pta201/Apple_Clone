@@ -1,0 +1,80 @@
+﻿/* Home layout*/
+/* Navigation */
+.nav-container {
+    background-color: black;
+}
+
+.nav-list {
+    font-size: .8rem;
+    position: relative;
+}
+
+.nav-list-item {
+    padding: .8rem 0;
+    color: var(--text-lighter);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav-list-item:hover {
+    color: #e7e7e7;
+}
+
+.nav-list-item i {
+    font-size: 1rem;
+}
+
+/* Product navigation */
+.product-nav-card {
+    text-align: center;
+}
+
+.product-nav-card-image {
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.product-nav-card-name {
+    color: var(--text-darker);
+}
+
+.product-nav-card:hover .product-nav-card-name {
+    text-decoration: underline;
+}
+
+/* Search Bar */
+.search-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text);
+    transition: .5s ease-in-out;
+}
+
+.search-bar {
+    width: 100%;
+    display: flex;
+}
+
+.search-icon {
+    padding: 1rem;
+}
+
+.search-input {
+    flex-grow: 1;
+    color: white;
+    font-size: 1rem;
+}
+
+.search-result {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}

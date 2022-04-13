@@ -1,0 +1,12 @@
+.scale-animation {
+    transform: scale(0);
+}
+
+.fadein-left {
+    left: 50%!important;
+}
+
+.show {
+    opacity: 1!important;
+    visibility: visible!important;
+}

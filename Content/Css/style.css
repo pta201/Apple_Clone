@@ -1,0 +1,225 @@
+/* Layout */
+.container {
+    width: 55%;
+}
+
+.row {
+    width: 100%;
+}
+/* Components */
+/* Header */
+.header, .subheader {
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline;
+}
+
+.subheader {
+    color: var(--text);
+}
+
+/* Carousel */
+.title-section {
+    margin: 1rem 0;
+}
+.title-section .header, .title-section .subheader{
+    font-size: 2rem;
+}
+
+.swiper {
+    width: 200%;
+    height: auto;
+}
+
+/* Product navigation */
+.product-nav-card {
+    text-align: center;
+}
+
+.product-nav-card-image {
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.product-nav-card-name {
+    color: var(--text-darker);
+}
+
+.product-nav-card:hover .product-nav-card-name {
+    text-decoration: underline;
+}
+
+/* Search Bar */
+.search-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text);
+    transition: .5s ease-in-out;
+}
+
+.search-bar {
+    width: 100%;
+    display: flex;
+}
+
+.search-icon {
+    padding: 1rem;
+}
+
+.search-input {
+    flex-grow: 1;
+    color: white;
+    font-size: 1rem;
+}
+
+.search-result {
+    position: absolute;
+    
+    top: 100%;
+    left: 0;
+}
+
+/* Card */
+.card {
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    height: 100%;
+}
+
+.content-icon {
+    font-size: 32px;
+}
+
+.content-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 86%;
+    margin: 7%;
+    line-height: 2;
+}
+
+.content-name {
+    text-transform: uppercase;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.content-title {
+    font-size: 29px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.content-image {
+    height: 100%;
+}
+
+
+/* Footer */
+.filter {
+    filter: invert(1);
+}
+
+section {
+    padding: 20px 0;
+}
+footer a {
+text-decoration: none;
+color: #86868b;
+}
+footer ul {
+list-style: none;
+text-align: left;
+margin: 0;
+padding: 0;
+}
+footer a:hover,
+footer a:active,
+footer a:focus {
+color: black;
+}
+
+.bottom {
+    background-color: #fbfbfb;
+
+}
+.footer.top {
+background-color: #f5f4f4;
+}
+.footer.top .wrapper,
+.footer.center .wrapper,
+.footer.bottom .wrapper {
+margin: 0 10%;
+}
+.footer.top li:nth-child(2) {
+border-top: 1px solid black;
+}
+
+.footer.center {
+background-color: #fbfbfb;
+}
+
+.footer.bottom .nav-item {
+border-left: 1px solid #86868b;
+}
+.footer.bottom .nav-item:first-child {
+border: none;
+}
+.footer.bottom .nav-link {
+padding: 0 10px;
+color: #86868b;
+}
+  
+/* Responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 8px!important;
+    }
+
+    .menu_btn {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .header__nav {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}

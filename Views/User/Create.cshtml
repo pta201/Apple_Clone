@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <link href="~/Content/Css/createUser.css" rel="stylesheet" />
+}
+
+<h2 class="text-center">SIGN UP</h2>
+
+<div class="register-form-wrapper">
+    <form action="" method="post">
+        @Html.ValidationSummary(true)
+        <section class="basic-info">
+            <ul>
+                <li>
+                    <label for="username">Username: </label>
+                    @Html.TextBox("txtUsername", "", htmlAttributes: new { @id = "username", @name = "username", @required = "required" })
+                </li>
+                <li>
+                    <label for="password">Password: </label>
+                    @Html.TextBox("txtPassword", "", htmlAttributes: new { @id = "password", @name = "password", @type = "password", @required = "required" })
+                </li>
+                <li>
+                    <label for="email">Email: </label>
+                    @Html.TextBox("txtEmail", "", htmlAttributes: new { @id = "email", @name = "email", @type = "email", @required = "required" })
+                </li>
+                <li>
+                    <label for="tel">Phone number: </label>
+                    @Html.TextBox("txtTel", "", htmlAttributes: new { @id = "tel", @name = "tel", @type = "tel" })
+                </li>
+                <li>
+                    <label for="birthday">Birthday: </label>
+                    @Html.TextBox("txtBirthday", "", htmlAttributes: new { @id = "birthday", @name = "birthday", @type = "date" })
+
+                </li>
+                <li>
+                    <label for="country">Country: </label>
+                    @Html.TextBox("txtCountry", "", htmlAttributes: new { @id = "country", @name = "country", @type = "text" })
+                </li>
+                <li>
+                    <label for="country">Gender: </label>
+                    <section class="gender-options">
+                        Male:   @Html.RadioButton("Gender", true)
+                        Female: @Html.RadioButton("Gender", false)
+                    </section>
+
+                </li>
+            </ul>
+        </section>
+        <section class="form-action">
+            <button class="btn btn-dark w-100 my-3 py-3 w-100">Submit</button>
+        </section>
+    </form>
+    <div class="text-center">Already have an account? <a href="DangNhap"><strong>Sign in</strong></a></div>
+</div>

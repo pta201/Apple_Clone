@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <link href="~/Content/Css/login.css" rel="stylesheet" />
+}
+
+<section style="text-align:center" class="dang-nhap">
+    <h2>SIGN IN</h2>
+    <div style="color: red; font-size: 2rem;">@ViewBag.ThongBao</div>
+    @using (Html.BeginForm())
+    {
+        <ul>
+            <li style="text-align:left">
+                <label for="username">Username: </label>
+                @Html.TextBox("txtUsername", "", htmlAttributes: new { @id = "username", @name = "username", @required = "required" })
+            </li>
+            <li style="text-align:left">
+                <label for="password">Password: </label>
+                @Html.Password("txtPassword", "", htmlAttributes: new { @id = "password", @name = "password", @required = "required" })
+            </li>
+        </ul>
+        <button class="btn btn-dark w-100 my-4 py-2">Login</button>
+    }
+    <div>Dont have an account? <a href="Create"><strong>Sign up</strong></a></div>
+</section>
