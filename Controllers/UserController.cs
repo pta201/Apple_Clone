@@ -75,6 +75,11 @@ namespace Apple_Clone.Controllers
         }
         public ActionResult DangNhap()
         {
+            User user = Session["user"] as User;
+            if (user != null)
+            {
+                return RedirectToAction("Details");
+            }
             return View();
         }
         [HttpPost]
@@ -160,11 +165,10 @@ namespace Apple_Clone.Controllers
                 return View();
             }
         }
-
-        // GET: User/Product
-        public ActionResult Product()
+        public ActionResult LogOut()
         {
-            return View();
+            Session["user"] = null;
+            return RedirectToAction("Index", "User");
         }
     }
 }

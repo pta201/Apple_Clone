@@ -5,11 +5,6 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-@{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-}
-
 @section styles{
     <link href="~/Content/Css/detailUser.css" rel="stylesheet" />
 }
@@ -37,11 +32,18 @@
             <p>@Html.DisplayFor(model => model.Birthday)</p>
         </li>
         <li>
-            <label for="birthday">Gender:</label>
-            <p>@Html.DisplayFor(model => model.Gender)</p>
+            <label for="gender">Gender:</label>
+            @{
+                var gioiTinh = Model.Gender;
+                var text = "";
+                if (gioiTinh == true) { text = "Male"; }
+                else { text = "Female"; }
+
+            }
+            <p>@text</p>
         </li>
         <li>
-            <label for="birthday">Country:</label>
+            <label for="country">Country:</label>
             <p>@Html.DisplayFor(model => model.Country)</p>
         </li>
     </ul>

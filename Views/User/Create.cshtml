@@ -1,4 +1,5 @@
-﻿
+﻿@model Apple_Clone_Website.Models.User
+
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,21 +11,26 @@
 <h2 class="text-center">SIGN UP</h2>
 
 <div class="register-form-wrapper">
-    <form action="" method="post">
+    @using (Html.BeginForm("Create", "User", FormMethod.Post))
+    {
         @Html.ValidationSummary(true)
         <section class="basic-info">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <ul>
                 <li>
                     <label for="username">Username: </label>
                     @Html.TextBox("txtUsername", "", htmlAttributes: new { @id = "username", @name = "username", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Username)
                 </li>
                 <li>
                     <label for="password">Password: </label>
                     @Html.TextBox("txtPassword", "", htmlAttributes: new { @id = "password", @name = "password", @type = "password", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Password)
                 </li>
                 <li>
                     <label for="email">Email: </label>
                     @Html.TextBox("txtEmail", "", htmlAttributes: new { @id = "email", @name = "email", @type = "email", @required = "required" })
+                    @Html.ValidationMessageFor(model => model.Email)
                 </li>
                 <li>
                     <label for="tel">Phone number: </label>
@@ -52,6 +58,6 @@
         <section class="form-action">
             <button class="btn btn-dark w-100 my-3 py-3 w-100">Submit</button>
         </section>
-    </form>
+    }
     <div class="text-center">Already have an account? <a href="DangNhap"><strong>Sign in</strong></a></div>
 </div>

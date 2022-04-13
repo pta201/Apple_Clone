@@ -1,0 +1,75 @@
+﻿@model Apple_Clone_Website.Models.Export
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Export</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ExportedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExportedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExportDetail.ProductID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExportDetail.ProductID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Store.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Store.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExportID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

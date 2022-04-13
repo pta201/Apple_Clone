@@ -26,5 +26,9 @@ namespace Apple_Clone_Website.Models
         public string SupplierID { get; set; }
         public string Image { get; set; }
         public string ProductColorID { get; set; }
+    
+        public virtual Category Category { get; set; }
+        public virtual ProductColor ProductColor { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

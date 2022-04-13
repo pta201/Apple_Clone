@@ -13,6 +13,7 @@
     <div style="color: red; font-size: 2rem;">@ViewBag.ThongBao</div>
     @using (Html.BeginForm())
     {
+        @Html.ValidationSummary(true)
         <ul>
             <li style="text-align:left">
                 <label for="username">Username: </label>
