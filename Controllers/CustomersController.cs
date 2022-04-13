@@ -60,10 +60,6 @@ namespace Apple_Clone_Website.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
-            if (!isAdmin())
-            {
-                return RedirectToAction("NotLoggedIn");
-            }
             return View();
         }
 
@@ -78,7 +74,7 @@ namespace Apple_Clone_Website.Controllers
             {
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
 
             return View(customer);
@@ -122,10 +118,6 @@ namespace Apple_Clone_Website.Controllers
         // GET: Customers/Delete/5
         public ActionResult Delete(string id)
         {
-            if (!isAdmin())
-            {
-                return RedirectToAction("NotLoggedIn");
-            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -147,6 +139,35 @@ namespace Apple_Clone_Website.Controllers
             db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult DangNhap()
+        {
+            User user = Session["user"] as User;
+            if (user != null)
+            {
+                return RedirectToAction("Details");
+            }
+            return View();
+        }
+        [HttpPost]
+        public ActionResult DangNhap(FormCollection collection)
+        {
+            if (ModelState.IsValid)
+            {
+                string customerName = collection["txtUsername"];
+                string passWord = collection["txtPassword"];
+                Customer user = db.Customers.SingleOrDefault(n => n.CustomerID == customerName);
+                if (user != null)
+                {
+                    ViewBag.ThongBao = "Login successful";
+
+                    Session.Add("user", user);
+                    return RedirectToAction("Details", "User");
+                }
+
+            }
+            ViewBag.ThongBao = "Login failed";
+            return View();
         }
 
         protected override void Dispose(bool disposing)
